@@ -4,7 +4,11 @@ let phrases = [
   'разобраться, о чём поют рэперы',
   'Arzamas',
   'расставить книги на полке по цвету',
-  'читать про зарплаты в Сан-Франциско'
+  'читать про зарплаты в Сан-Франциско',
+  'прочитать новости и ужаснуться в комментариях',
+'попасть в поток грустных песен и вспомнить все ошибки молодости',
+'посмотреть трейлер сериала и заодно первый сезон',
+'проверить непрочитанное в Telegram-каналах',
 ];
 
 function getRandomElement(arr) {
@@ -18,5 +22,13 @@ let advice = document.querySelector('.advice');
 let image = document.querySelector('.image');
 
 button.addEventListener('click', function () {
-    phrase.textContent = getRandomElement(phrases);
+  let randomElement = getRandomElement(phrases);
+  phrase.textContent = randomElement;
+
+  // обратите внимание, что условная конструкция
+  // помещена внутри обработчика клика на кнопку
+  if (randomElement.length > 40) {
+    
+  }
+
 });
