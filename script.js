@@ -28,7 +28,9 @@ button.addEventListener('click', function () {
   // обратите внимание, что условная конструкция
   // помещена внутри обработчика клика на кнопку
   if (randomElement.length > 40) {
-    
+    advice.style.fontSize = '33px'
+  } else {
+    advice.style.fontSize = '42px'
   }
 
 });
