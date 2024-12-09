@@ -12,8 +12,11 @@ function getRandomElement(arr) {
   return arr[randIndex];
 }
 
-let button = document.querySelector('.button')
-let advice = document.querySelector('.advice')
-let phrase = document.querySelector('.phrase')
-let image = document.querySelector('.image')
-phrase.textContent = getRandomElement(phrases)
+let button = document.querySelector('.button');
+let phrase = document.querySelector('.phrase');
+let advice = document.querySelector('.advice');
+let image = document.querySelector('.image');
+
+button.addEventListener('click', function () {
+    phrase.textContent = getRandomElement(phrases);
+});
