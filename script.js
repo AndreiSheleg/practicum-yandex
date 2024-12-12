@@ -23,9 +23,10 @@ let image = document.querySelector('.image');
 
 button.addEventListener('click', function () {
   let randomElement = getRandomElement(phrases);
-  phrase.textContent = randomElement;
+  phrase.textContent = randomElement.text;
+  image.src = randomElement.image;
 
-  if (randomElement.length > 40) {
+  if (randomElement.text.length > 40) {
     advice.style.fontSize = '33px';
   } else {
     advice.style.fontSize = '42px';
